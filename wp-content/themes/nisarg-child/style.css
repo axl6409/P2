@@ -1,0 +1,616 @@
+/*
+Theme Name: Nisarg Child
+Theme URI: https://www.falgunithemes.com/downloads/nisarg/
+Template: nisarg
+Author: Falguni Desai
+Author URI: https://www.falgunithemes.com
+Description: Nisarg is a new fully responsive and translation ready theme that allows you to create stunning blogs and websites. Theme is well suited for travel, photography, recipe, design, art, personal and any other creative websites and blogs. The theme is developed using Bootstrap 3 that makes it mobile and tablets friendly. It has various options in WordPress Customizer to change look of the theme. Theme customizer can be used to add your own header image of flexible height, background image, to set background color, header text color and accent color.
+Tags: flexible-header,two-columns,right-sidebar,theme-options,custom-colors,custom-background,custom-header,custom-menu,featured-images,post-formats,sticky-post,translation-ready,rtl-language-support,threaded-comments
+Version: 1.2.8.2.1554382390
+Updated: 2019-04-04 14:53:10
+
+*/
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ********************    INDEX     ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+
+/* 
+
+* -> GENERAL (animation)
+
+*******************************
+
+* -> HEADER (header.php)
+
+*******************************
+
+* -> IMAGE HEADER (header.php)
+* -> --> CHILD CLASSES
+* -> --> CSTM PARENT CLASSES
+
+*******************************
+
+* -> BLOG SIDEBAR (index.php / sidebar.php)
+
+*******************************
+
+* -> BLOG ARTICLES (index.php / content-excerpt_blog.php)
+
+*******************************
+
+* -> HOME PAGE (page.php / template-home.php / content-home.php)
+* -> --> HOME POST EXCERPT (content-excerpt_home.php)
+
+*******************************
+
+* -> PLUS D'INFOS (page.php / template-infos.php / content-infos.php / content-excerpt_infos.php)
+
+*******************************
+
+* -> ARCHIVES (archives.php / content-excerpt.php)
+
+*******************************
+
+* -> MONTH TABS (page.php / template-month.php / content-month.php / content-excerpt_month.php)
+
+*******************************
+
+* -> RESPONSIVE
+* - --> 550px
+* - --> 650px
+* - --> 651px to 820px
+* - --> 890px
+* - --> 1200px
+
+*/
+
+
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ********************    GENERAL   ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+.entry-header {
+    text-transform: initial;
+}
+
+@-webkit-keyframes slideInDown {
+    0% {
+        opacity:  0;
+        -webkit-transform: translateY(-2000px);
+        transform:  translateY(-2000px);
+    }
+
+    100% {
+        -webkit-transform:  translateY(0);
+        transform:  translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+        -webkit-transform:  translateY(-2000px);
+        -ms-transform:  translateY(-2000px);
+        transform:  translate(-2000px);
+    }
+
+    100% {
+        -webkit-transform:  translateY(0);
+        -ms-transform:  translateY(0);
+        transform:  translate(0);
+    }
+}
+
+.slideInDown {
+    -webkit-animation-name:  slideInDown;
+    animation-name:  slideInDown;
+}
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ********************    HEADER    ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+.navbar-header {
+    width: 100%;
+}
+
+.header_search {
+    margin-top: 10px;
+}
+
+.search-submit {
+    width: 42px;
+}
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ******************** IMAGE HEADER ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+/* CHILD CLASSES */
+
+.cstm_header_image {
+	width: 100%;
+}
+
+.cstm_header_branding {
+	position: absolute;
+	top: 30%;
+	text-align: center;
+	width: 	100%;
+	padding-top: 	5%;
+}
+
+
+.cstm_header_site_title {
+	width: 	100%;
+	padding: 10px 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+	background-color:  rgba(0,0,0,0.5);		
+}
+
+/* CSTM PARENT CLASSES */
+
+.cstm_site_header {
+    position: relative;
+    z-index: 80;
+}
+
+.cstm_site_branding {
+	background-color: 	rgba(0,0,0,0.5);
+	padding-top: 5%;
+	padding-bottom:  5%;
+	width: 100%;
+}
+
+.cstm_site_description {
+	letter-spacing: 10px;
+}
+
+
+.container > .navbar-header {
+ 	display: flex;
+ 	flex-direction: row;
+ 	justify-content: space-between;
+ 	height: 4.5em;
+}
+
+.menu-item::before {
+	position: absolute;
+	left: -15px;
+	top: 15px;
+}
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ******************** BLOG SIDEBAR ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+
+.cstm_sidebar {
+	display:  flex;
+	flex-direction:  row;
+	justify-content: space-evenly;
+}
+
+#secondary .widget {
+	width: 35%;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	text-align: center;
+}
+
+#secondary .widget-title::after {
+    left: 43%;
+}
+
+.widget_tag_cloud 
+.tagcloud a {
+	font-size: 25px;
+}
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ******************** BLOG ARTICLES ******************* */
+/* ****************************************************** */
+/* ****************************************************** */
+
+/* -> index.php */
+
+
+.cstm_blog_main {
+	margin-bottom: 5%;
+}
+
+.cstm_blog_post_main {
+	position: relative;
+    display: inline-block;
+	height: 100%;
+	width: 49%;
+}
+
+
+.cstm_blog_post_main:hover
+.cstm_post_content {
+	visibility: visible;
+	background-color: rgba(255,255,255,0.8);
+}
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ********************  HOME PAGE  ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+.cstm_entry_animation {
+    animation-duration: 2s;
+    animation-name:  slideInDown;
+}
+
+.home_actualites_head {
+    display:  flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home_actualites_head_button {
+    height: 40px;
+    width:  80px;
+}
+
+.home_actualites_head_button a {
+    color: white;
+}
+
+.home_activites {
+	display: flex;
+	flex-direction:  row;
+}
+
+.home_activites_button {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.home_entry_content {
+	height: 100%;
+	width: 100%;
+	padding:  0.5em 1em;
+    text-align: center;
+}
+
+
+.home_entry_content_actualites {
+	height:  100%;
+}
+
+.featured-image img {
+    width: 100%;
+}
+
+
+/* HOME POST EXCERPT */
+
+.cstm_post_main {
+	position: relative;
+	height: 100%;
+}
+.cstm_post_main:hover {
+    background-color:  rgba(0,0,0,0.1);
+}
+
+
+.cstm_post_content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	visibility: hidden;
+    width: 100%;
+}
+
+.cstm_post_main:hover
+.cstm_post_content {
+	visibility: visible;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.home_entry_this_month {
+	display: flex;
+	flex-direction: row;
+}
+
+
+.home_entry_this_month article {
+	width: 50%;
+}
+
+
+
+
+.cstm_entry_content {
+	text-align: center;
+}
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ******************** Plus d'Infos ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+.infos_the_content {
+    text-align: center;
+}
+
+
+.infos_buttons_categ {
+    text-align: center;
+}
+
+
+.infos_content {
+    text-align: center;
+    display: none;
+}
+
+.infos_content_posts {
+    height:  100%;
+}
+
+.cstm_post_infos {
+    position: relative;
+    height: 100%;
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cstm_post_infos:hover
+.cstm_post_content {
+	visibility: visible;
+	background-color: rgba(255,255,255,0.8);
+}
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* *****************       ARCHIVES       *************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+
+.cstm_post_background:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ********************  Month Tabs  ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+.cstm_tab_post_content {
+	display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    padding: 0.5em 0.8em;
+}
+
+.cstm_tab_title {
+	width: 25%;
+}
+
+.cstm_tab_excerpt {
+	width: 45%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+
+.cstm_tab_date {
+	width: 13%;
+	border: 0;
+}
+
+.cstm_tab_subscription {
+	width: 17%;
+}
+
+
+
+
+/* ****************************************************** */
+/* ****************************************************** */
+/* ****************************************************** */
+/* ********************  RESPONSIVE  ******************** */
+/* ****************************************************** */
+/* ****************************************************** */
+
+@media screen and (max-width: 550px) {
+    .header_search {
+        width: 80%;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .search-submit {
+        width: 42px;
+    }
+
+    /* Blog Sidebar */
+    .cstm_sidebar {
+        display:  flex;
+        flex-direction:  column;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .header_search {
+        width: 80%;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .search-submit {
+        width: 42px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    
+    .header_search {
+        width: 40%;
+        float: right;
+        margin-right: 20px;
+    }
+
+    .search-submit {
+        width: 42px;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        z-index: 99;
+        background-color: white;
+        width: 50%;
+        height: 250px;
+
+    }
+}
+
+
+
+
+@media screen and (max-width: 990px) {
+
+    .cstm_header_branding {
+        width: 100%;
+        top: 0;
+    }
+
+    .container > .navbar-header {
+    display: block;
+    height: 6.5em;
+    }
+
+    .home_entry_this_month article {
+        width: 100%;      
+    }
+    
+    .home_entry_this_month {
+        display: flex;
+        flex-direction: column;       
+    }
+
+    .home_activites {
+        display:  flex;
+        flex-direction:  column;
+        background-color: #faebd7;
+    }
+
+    .cstm_blog_post_main {
+        width:  100%;
+    }
+
+    #secondary .widget {
+        width:  100%;
+    }
+
+    /* Home Page */
+
+    .home_entry_content_actualites {
+        text-align: center;
+    }
+
+    /* Blog Sidebar */
+
+    .widget ul {
+        padding: 0 0;
+    }
+
+    /* Post Display */
+    
+    .cstm_post_content {
+        visibility: visible;
+        background-color: rgba(255,255,255,0.8);
+    }
+    
+    .post_excerpt {
+        display: none;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .cstm_tab_post_content {
+        flex-direction: column;
+    }
+
+    .cstm_tab_title {
+        width: 100%;
+    }
+
+    .cstm_tab_excerpt {
+        width: 100%;
+        border: 0;
+        background-color: antiquewhite;
+    }
+
+    .cstm_tab_date {
+        width: 100%;
+    }
+
+    .cstm_tab_subscription {
+        width: 100%;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .site-footer {
+        margin-top: 500px;
+    }
+}
